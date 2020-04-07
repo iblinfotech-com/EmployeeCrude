@@ -4,6 +4,7 @@
     <EntitySetMapping Name="Employees">
       <EntityTypeMapping TypeName="CrudModel.Employee">
         <MappingFragment StoreEntitySet="Employee">
+          <ScalarProperty Name="Salary" ColumnName="Salary" />
           <ScalarProperty Name="id" ColumnName="id" />
           <ScalarProperty Name="Name" ColumnName="Name" />
           <ScalarProperty Name="Phone" ColumnName="Phone" />

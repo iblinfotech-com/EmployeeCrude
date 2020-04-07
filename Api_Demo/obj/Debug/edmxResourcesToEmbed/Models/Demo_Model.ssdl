@@ -9,6 +9,7 @@
     <Property Name="Phone" Type="varchar" MaxLength="50" />
     <Property Name="Email" Type="varchar" MaxLength="50" />
     <Property Name="Address" Type="varchar" MaxLength="50" />
+    <Property Name="Salary" Type="int" />
   </EntityType>
   <EntityContainer Name="CrudModelStoreContainer">
     <EntitySet Name="Employee" EntityType="Self.Employee" Schema="dbo" store:Type="Tables" />
