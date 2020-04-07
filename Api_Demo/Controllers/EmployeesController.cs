@@ -100,6 +100,17 @@ namespace Api_Demo.Controllers
 
             return Ok(employee);
         }
+        [ResponseType(typeof(Employee))]
+        public IHttpActionResult SearchEmployee(string Name)
+        {
+            List<Employee> employee = db.Employees.Where(a => a.Name == Name).ToList();
+            if (employee == null)
+            {
+                return NotFound();
+            }
+
+            return Ok(employee);
+        }
 
         protected override void Dispose(bool disposing)
         {
