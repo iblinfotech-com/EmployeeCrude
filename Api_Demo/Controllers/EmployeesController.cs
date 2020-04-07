@@ -101,6 +101,20 @@ namespace Api_Demo.Controllers
             return Ok(employee);
         }
 
+        [HttpGet]
+        [Route("~/api/Employees/Countsalary")]
+        public object CountSalary()
+        {
+            var  employees = db.Employees.Select(a=>a.Salary).ToList();
+            if (employees != null)
+            {
+              var data =  employees.Sum();
+               
+                return employees.Sum();
+            }
+            return 0;
+        }
+        
         protected override void Dispose(bool disposing)
         {
             if (disposing)
